@@ -1,0 +1,257 @@
+<ng-progress
+[positionUsing]="'marginLeft'"
+[direction]="'leftToRightIncreased'"
+[color]="'#fff'"
+[trickleSpeed]="1000" 
+[thick]="true" 
+[ease]="'linear'"
+></ng-progress>
+
+<div class="row bar-row-1">
+  <div class="container">
+    <h1 class="wow fadeInDown">Obtener de quoi vous abreuver</h1>
+  </div>
+</div>
+
+<div class="row bar-row-2">
+  <div class="container">
+    <div class="col l5 m5 s12 bar-row-2-content-left">
+      <h2 class="wow fadeIn" data-wow-duration="600ms">Bar gastronomique</h2>
+      <h3 class="wow fadeIn" data-wow-duration="600ms">
+          " Les saveurs excitantes de la cuisine internationale dans un superbe intérieur de 
+          notre bar gastronomique ".
+        
+      </h3>
+      <p class="wow fadeIn" data-wow-duration="600ms">
+          Nous vous proposons toute une variété de boissons et d'appéritifs de qualité.
+      </p>
+    </div>
+    <div class="col l7 m7 s12 bar-row-2-content-right">
+      <img class="wow fadeIn" data-wow-duration="600ms"  src="../../assets/images/bar3.jpg" alt="Bar image">
+    </div>
+  </div>
+</div>
+
+<div class="row bar-row-3">
+    <div class="parallax-container">
+        <div class="parallax"><img src="../../assets/images/bar5.jpg"></div>
+        <div class="container row bar-row-3">
+          <div class="col l12 m12 s12">
+            <div class="col l4 m4 s12 bar-bloc">
+              <h2>Appéritifs 6Cl</h2>
+              <div *ngFor="let b of apperitifs">
+                  <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                      <span>{{b.name}}</span>
+                      <span>| {{b.price}} Frcs</span>
+                    </h5>
+              </div>
+            </div>
+            <div class="col l4 m4 s12 bar-bloc">
+                <h2>Liqueurs</h2>
+                <div *ngFor="let b of digestifs">
+                    <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                        <span>{{b.name}}</span>
+                        <span>| {{b.price}} Frcs</span>
+                      </h5>
+                </div>
+            </div>
+            <div class="col l4 m4 s12 bar-bloc">
+                <h2>Cognac</h2>
+                <div *ngFor="let b of cognac">
+                    <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                        <span>{{b.name}}</span>
+                        <span>| {{b.price}} Frcs</span>
+                      </h5>
+                </div>
+            </div>
+          </div>
+          <div class="col l12 m12 s12">
+            <div class="col l4 m4 s12 bar-bloc">
+                <h2>Digestifs</h2>
+                <div *ngFor="let b of digestifs">
+                    <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                        <span>{{b.name}}</span>
+                        <span>| {{b.price}} Frcs</span>
+                      </h5>
+                </div>
+            </div>
+            <div class="col l4 m4 s12 bar-bloc">
+                <h2>gins</h2>
+                <div *ngFor="let b of gins">
+                    <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                        <span>{{b.name}}</span>
+                        <span>| {{b.price}} Frcs</span>
+                      </h5>
+                </div>
+            </div>
+            <div class="col l4 m4 s12 bar-bloc">
+                <h2>rhums</h2>
+                <div *ngFor="let b of rhums">
+                    <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                        <span>{{b.name}}</span>
+                        <span>| {{b.price}} Frcs</span>
+                      </h5>
+                </div>
+            </div>
+          </div>
+          <div class="col l12 m12 s12">
+              <h2 class="w-h2">Whisky</h2>
+              <div class="col l4 m4 s12 bar-bloc">
+                  <div *ngFor="let b of whisky_1">
+                      <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                          <span>{{b.name}}</span>
+                          <span>| {{b.price}} Frcs</span>
+                        </h5>
+                  </div>
+              </div>
+              <div class="col l4 m4 s12 bar-bloc">
+                  <div *ngFor="let b of whisky_2">
+                      <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                          <span>{{b.name}}</span>
+                          <span>| {{b.price}} Frcs</span>
+                        </h5>
+                  </div>
+              </div>
+              <div class="col l4 m4 s12 bar-bloc">
+                  <div *ngFor="let b of whisky_3">
+                      <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                          <span>{{b.name}}</span>
+                          <span>| {{b.price}} Frcs</span>
+                        </h5>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row bar-row-4">
+  <div class="container">
+    <h1 class="wow fadeInUp" data-wow-duration="600ms">Raffraichessements</h1>
+    <div class="col l12 m12 s12 img-bloc">
+        <img src="../../assets/images/bar6.jpg" class="wow fadeIn" data-wow-duration="600ms">
+    </div>
+  </div>
+</div>
+ 
+<div class="row bar-row-5">
+  <div class="container row bar-row-3">
+    <div class="col l12 m12 s12">
+      <div class="col l4 m4 s12 bar-bloc">
+        <h2>Boissons SOLIBRA</h2>
+        <div *ngFor="let b of boissons_s">
+            <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                <span>{{b.name}}</span>
+                <span>| {{b.price}} Frcs</span>
+              </h5>
+        </div>
+      </div>
+      <div class="col l4 m4 s12 bar-bloc">
+          <h2>Boissons energétiques</h2>
+          <div *ngFor="let b of boissons_e">
+              <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                  <span>{{b.name}}</span>
+                  <span>| {{b.price}} Frcs</span>
+                </h5>
+          </div>
+      </div>
+      <div class="col l4 m4 s12 bar-bloc">
+          <h2>Boissons PEPSI</h2>
+          <div *ngFor="let b of cocktails_b">
+              <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                  <span>{{b.name}}</span>
+                  <span>| {{b.price}} Frcs</span>
+                </h5>
+          </div>
+      </div>
+    </div>
+    <div class="col l12 m12 s12">
+        <div class="col l4 m4 s12 bar-bloc">
+            <h2>Boissons chaudes</h2>
+            <div *ngFor="let b of boissons_c">
+                <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                    <span>{{b.name}}</span>
+                    <span>| {{b.price}} Frcs</span>
+                  </h5>
+            </div>
+        </div>
+        <div class="col l4 m4 s12 bar-bloc">
+            <h2>Cannettes de sucrerie</h2>
+            <div *ngFor="let b of cannettes_s">
+                <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                    <span>{{b.name}}</span>
+                    <span>| {{b.price}} Frcs</span>
+                  </h5>
+            </div>
+        </div>
+        <div class="col l4 m4 s12 bar-bloc">
+            <h2>Cannettes de bières</h2>
+            <div *ngFor="let b of cannettes_b">
+                <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                    <span>{{b.name}}</span>
+                    <span>| {{b.price}} Frcs</span>
+                  </h5>
+            </div>
+        </div>
+      </div>
+      <div class="col l12 m12 s12">
+          <div class="col l4 m4 s12 bar-bloc">
+              <h2>Cocktails de la Brise</h2>
+              <div *ngFor="let b of cocktails_b">
+                  <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                      <span>{{b.name}}</span>
+                      <span>| {{b.price}} Frcs</span>
+                    </h5>
+              </div>
+          </div>
+          <div class="col l4 m4 s12 bar-bloc">
+              <h2>Sirops</h2>
+                <div *ngFor="let b of sirops">
+                    <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                        <span>{{b.name}}</span>
+                        <span>| {{b.price}} Frcs</span>
+                      </h5>
+                </div>
+          </div>
+          <div class="col l4 m4 s12 bar-bloc">
+              <h2>Jus de fruits frais</h2>
+              <div *ngFor="let b of jus">
+                  <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                      <span>{{b.name}}</span>
+                      <span>| {{b.price}} Frcs</span>
+                    </h5>
+              </div>
+          </div>
+        </div>
+        <div class="col l12 m12 s12">
+            <div class="col l4 m4 s12 bar-bloc">
+              <h2>Bières</h2>
+              <div *ngFor="let b of bieres">
+                  <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                      <span>{{b.name}}</span>
+                      <span>| {{b.price}} Frcs</span>
+                    </h5>
+              </div>
+            </div>
+            <div class="col l4 m4 s12 bar-bloc">
+              <h2>Eaux minerales</h2>
+              <div *ngFor="let b of eaux_m">
+                  <h5 class="wow fadeInUp" data-wow-duration="600ms">
+                      <span>{{b.name}}</span>
+                      <span>| {{b.price}} Frcs</span>
+                    </h5>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+
+<div class="row bar-row-6">
+    <div class="container">
+        <div class="col l12 m12 s12 bar-row-6-content">
+            <h3 class="wow fadeIn" data-wow-duration="600ms">Restaurant</h3>
+            <h1 class="wow fadeInUp" data-wow-duration="800ms">La Brise</h1>
+            <h4 class="wow fadeInUp" data-wow-duration="800ms">" L'art de savoir faire et d'être "</h4>
+        </div>
+    </div>
+</div>

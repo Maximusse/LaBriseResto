@@ -1,0 +1,101 @@
+<ng-progress
+[positionUsing]="'marginLeft'"
+[direction]="'leftToRightIncreased'"
+[color]="'#fff'"
+[trickleSpeed]="1000" 
+[thick]="true" 
+[ease]="'linear'"
+></ng-progress>
+
+<div class="row accueil-row-1">
+  <div class="container">
+    <img class="accueil-row-1-img wow fadeInDown" src="../../assets/images/o1.gif" alt="image">
+    <h3 class="wow fadeInDown" data-wow-delay="0.2s">Plats délicieux et adaptés à votre mode de vie</h3>
+    <h1 class="wow fadeIn" data-wow-delay="0.4s">Votre restaurant du quotidient</h1>
+    <button class="btn waves-effect white grey-text text-darken-3 wow fadeIn" data-wow-delay="0.6s" routerLink="/menu">Découvrer</button>
+  </div>
+</div>
+
+<div class="row accueil-row-2">
+  <div class="container">
+    <div class="col l5 m5 s12 row-right-bloc ">
+      <h3 class="wow fadeIn">Restaurant</h3>
+      <h2 class="wow fadeInUp" data-wow-duration="600ms">La Brise</h2>
+      <p>
+        Du petit déjeuné au diné, rien de tel que de consommer des plats déliquatement 
+        conçus par des pros de la cuisine africaines et européenne. Venez découvrir de
+         vous même.
+      </p>
+    </div>
+    <div class="col l6 offset-l1 m5 offset-m1 s12 row-left-bloc ">
+        <img src="../../assets/images/back-img2.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="row acceuil-row-3">
+    <div class="parallax-container">
+        <div class="parallax"><img src="../../assets/images/back-img5.jpg"></div>
+        <div class="container acceuil-row-3-container">
+          <h4 class="a-r3-h4 wow fadeIn">Venez et détendez vous</h4>
+          <h2 class="a-r3-h2 wow fadeInUp" data-wow-duration="600ms">Faire de vous un client satisfait</h2>
+          <p class="a-r3-p">
+              Un espace d'accueil élaboré aussi pour de grands éffectifs. De quoi 
+              réunir toute la famille autour de plats savoureux.
+          </p>
+      </div>
+    </div>
+</div>
+
+<div class="row accueil-row-4">
+  <div class="container">
+    <div class="col l12 m12 s12 a-r-4-l1">
+      <h4>Menu</h4>
+    </div>
+    <div class="col l6 m6 s12 a-r-4-right" >
+      <h4 class="a-r-4-h4">Entrées froides et chaudes</h4>
+      <div class="recettes-bloc " *ngFor="let recette of someElements_1">
+        <div class="col l8 m8 s8">
+          <h6 class="a-r-4-h6">{{recette.titre}}</h6>
+        </div>
+        <div class="col l4 m4 s4">
+          <h6 class="a-r-4-h6">{{recette.price}} Frcs</h6>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="col l6 m6 s12 a-r-4-left">
+        <h4 class="a-r-4-h4">Sandwichs</h4>
+        <div class="recettes-bloc " *ngFor="let recette of someElements_2">
+            <div class="col l8 m8 s8">
+              <h6 class="a-r-4-h6">{{recette.titre}}</h6>
+            </div>
+            <div class="col l4 m4 s4">
+              <h6 class="a-r-4-h6">{{recette.price}} Frcs</h6>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="col l12 m12 s12 acceui-row-4-btn">
+        <a routerLink="/menu" class="btn waves-effect a-r-4-btn">Voir plus</a>
+    </div>
+  </div>
+</div>
+
+<div class="row accueil-row-5">
+    <div class="parallax-container">
+        <div class="parallax"><img src="../../assets/images/back-img7.jpg"></div>
+        <div class="container acceuil-row-5-container">
+          <div class="col l6 m6 s12 a-r-5-left">
+              <img src="../../assets/images/back-img8.jpg">
+          </div>
+          <div class="col l6 m6 s12 a-r-5-right">
+            <h3 class="a-r-5-h3 wow fadeIn">la perfection dans votre quotidient</h3>
+            <p class="a-r-5-p  wow fadeIn">
+                Les saveurs excitantes de la cuisine internationale dans un superbe intérieur 
+                de notre parc gastronomique.
+            </p>
+          </div>
+        </div>
+    </div>
+</div>

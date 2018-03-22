@@ -1,0 +1,388 @@
+/* scroll-menu-top */
+
+#scroll-menu-top{
+    position: fixed;
+    z-index: 1000;
+}
+
+.scroll-hide{
+    right: -677px ;
+    transition: 700ms;
+}
+
+.scroll-show{
+    right: -437px ;
+    transition: 700ms;
+}
+
+.control{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 15px 0 0 15px;
+}
+
+.control-content i {
+    margin-left: 7px;
+    color: grey;
+    text-align: center;
+    font-size: 26px;
+}
+
+.control-content i:hover{
+    cursor: pointer;
+    color: #fff;
+    transition: 600ms;
+}
+
+.lateral-menu{
+    padding-left: 0;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+.lateral-menu ul{
+    margin:0;
+    padding-bottom: 10px;
+}
+
+.lateral-menu ul li{
+    display: block;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    float: left;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
+.lateral-menu ul li a{
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+}
+
+.lateral-menu ul li a:hover{
+    background-color: #fff;
+    color: rgb(59, 59, 59);
+    cursor: pointer;
+    transition: 600ms;
+}
+
+
+/* menu-row-1 */
+.menu-row-1{
+    margin-top: -100px;
+    margin-bottom: 0;
+    padding-top: 299px;
+    padding-bottom: 305px;
+    background: url('../../../assets/images/back-img1.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.menu-row-1 h1{
+    margin-bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 7em;
+    font-weight: bolder;
+    font-family: bs;
+}
+
+@media only screen and (max-width : 375px)  and (max-device-width : 375px) {
+    .menu-row-1{
+        background: url('../../../assets/images/smart2.jpg');
+        background-attachment: fixed;
+    }
+
+    div.row.menu-row-1{
+        padding-top: 170px;
+        padding-bottom: 234px;
+    }
+
+    .menu-row-1 h1{
+        margin-bottom: 20px !important;
+        font-size: 4em !important;
+    }
+}
+
+@media only screen  
+    and (min-device-width : 375px) 
+    and (max-device-width : 768px) {
+        div.row.menu-row-1{
+            padding-top: 187px;
+        }
+        .menu-row-1 h1{
+            margin-bottom: 20px !important;
+            font-size: 5em !important;
+        }
+}
+
+/* // menu-row-1 */
+
+/* menu-row-2 */
+.menu-row-2{
+    background: #000;
+}
+
+div.menu-row-2-bloc {
+    padding: 0;
+    min-height: 100%;
+    height: 100%;
+}
+
+div.menu-row-2-bloc img{
+    width: 100%;
+}
+
+div.menu-row-2-two {
+    min-height: 100%;
+    height: 100%;
+}
+
+@media only screen 
+    and (min-width : 312px) and (min-device-width : 312px) 
+    and (max-width : 617px)  and (max-device-width : 617px) {
+
+        div.menu-row-2-two {
+            padding: 13px 14px;
+        }
+        div.menu-row-2-two  h2{
+            font-size: 12px;
+            text-align: center;
+        }
+}
+
+@media only screen  and (min-device-width : 618px) {
+    div.menu-row-2-two {
+        /* padding: 0px 14px 0px 29px; */
+    }
+    div.menu-row-2-two  h2{
+        margin-top: 54px;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media only screen  and (min-device-width : 992px) {
+    div.menu-row-2-two {
+        /* padding: 52px 64px; */
+    }
+    div.menu-row-2-two  h2{
+        margin-top: 84px;
+        font-size: 20px;
+    }
+}
+
+@media only screen  and (min-device-width : 1200px) {
+    div.menu-row-2-two {
+        /* padding: 18px 64px; */
+        
+    }
+    div.menu-row-2-two  h2{
+        margin-top: 140px;
+        font-size: 2em;
+    }
+    div.menu-row-2-two  h3{
+        font-size: 6em;
+    }
+}
+
+div.menu-row-2-two  h2{
+    color: #fff;
+    font-weight: bolder;
+}
+
+div.menu-row-2-two  h3{
+    color: rgb(212, 211, 211);
+    font-weight: bolder;
+    font-family: BS;
+    text-align: center;
+}
+
+
+/* // menu-row-2 */
+
+/*  menu-row-3 */
+.menu-row-3{
+    margin: 0;
+}
+
+.content-menu-h2{
+    font-size: 3em;
+    font-weight: bolder;
+    display: block;
+    width: 100%;
+    height: 78px;
+    position: relative;
+}
+
+.content-menu-h2:before{
+    position: absolute;
+    content: '';
+    background-color: #efefef;
+    height: 3px;
+    width: 30%;
+    bottom: 0;
+    left: 0;
+}
+
+.content-menu-bloc-h2{
+    font-weight: bolder;
+    font-size: 25px;
+    text-transform: capitalize;
+    line-height: 35px;
+    
+}
+
+.content-menu-h5{
+    color: rgb(180, 180, 180);
+    font-weight: bolder;
+    font-size: 18px;
+    text-transform: capitalize;
+    
+    
+}
+
+.content-menu-bloc-h2:hover{
+    padding-left: 30px;
+    background: #fcfcfc;
+    box-shadow: 5px 5px 15px rgb(170, 168, 168);
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.content-menu-bloc-h2 > span{
+    display: inline-block;
+    width: 100%;
+}
+
+.content-menu-bloc-h2 > span:last-child{
+    color: #777;
+}
+
+.menu-row-3-container div h3 {
+    color: #fff;
+    text-align: center;
+    font-family: BS;
+    font-weight: bolder;
+}
+
+@media only screen  and (min-device-width : 1200px) {
+    .content-menu-h2{
+        font-size: 3em !important;
+        height: 60px !important;
+        
+    }
+
+
+    .content-menu-bloc-h2{
+        font-size: 25px !important;
+    }
+    .menu-row-3-container div h3 {
+        margin-top: 193px;
+        font-size: 8em;
+    }
+}
+
+@media only screen  and (min-device-width : 992px) {
+    
+    .menu-row-3-container div h3 {
+        margin-top: 193px;
+        font-size: 8em;
+    }
+}
+
+@media only screen  and (min-device-width : 618px) {
+
+    .content-menu-h2{
+        font-size: 26px;
+        height: 39px;
+    }
+
+    .content-menu-bloc-h2{
+        font-size: 16px;
+    }
+
+    .menu-row-3-container div h3 {
+        margin-top: 193px;
+        font-size: 8em;
+    }
+}
+
+
+@media only screen  
+    and (min-width : 312px) and (min-device-width : 312px) 
+    and (max-width : 617px)  and (max-device-width : 617px){
+
+        .content-menu-h2{
+            font-size: 26px;
+            text-align: center;
+            height: 62px;
+        }
+
+        .content-menu-h2-chinoises,.content-menu-h2-africaines,.content-menu-h2-viandes,.content-menu-h2-volailles,.content-menu-h2-poissons,.content-menu-h2-pates{
+            height: 70px;
+        }
+
+        .content-menu-h2:before{
+            left: 36%;
+        }
+
+        .content-menu-bloc-h2{
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .menu-row-3-container div h3 {
+            margin-top: 193px;
+            font-size: 8em;
+        }
+}
+
+
+.row-menu-bottom{
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #efefef;
+}
+
+.row-menu-bottom-bloc h3, .row-menu-bottom-bloc h2,.row-menu-bottom-bloc p{
+    text-align: center;
+}
+
+.row-menu-bottom-bloc h3{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+}
+.row-menu-bottom-bloc h2{
+    font-family: bs;
+    font-weight: 700;
+    font-size: 6em;
+}
+.row-menu-bottom-bloc p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+.row-menu-bottom-img-bloc img{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (min-width : 992px)  and (min-device-width : 992px) {
+    .row-menu-bottom-bloc{
+        padding-top: 159px;
+    }
+}
+
+
+/* // menu-row-3 */

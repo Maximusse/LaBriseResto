@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+.clear{
+    clear: both;
+}
+
+.b{
+    border: solid 1px red;
+}
+
+.b2{
+    border: solid 1px #84ce23;
+}
+
+@font-face {
+    font-family: 'bs';
+    src: url('assets/fonts/bs.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #f53353;
+    border-radius: 10px;
+}

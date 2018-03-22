@@ -1,0 +1,362 @@
+<ng-progress
+[positionUsing]="'marginLeft'"
+[direction]="'leftToRightIncreased'"
+[color]="'#fff'"
+[trickleSpeed]="1000" 
+[thick]="true" 
+[ease]="'linear'"
+></ng-progress>
+
+
+<div id="scroll-menu-top" class="row scroll-menu-top " [class.scroll-hide]="!showMenu" [class.scroll-show]="showMenu">
+	<div class="col l1 m1 s1 control">
+		<div class="control-content">
+			<i class="fa fa-reorder" (click)="showmenu()"></i>
+		</div>
+	</div>
+	<div class="col l4 m4 s4 lateral-menu">
+		<ul>
+			<li><a (click)="scrollToTop(e)">Entrées</a></li>
+			<li><a (click)="scrollToTop(s)">Sandwishs</a></li>
+			<li><a (click)="scrollToTop(c)">chinoises</a></li>
+			<li><a (click)="scrollToTop(p)">Potages</a></li>
+			<li><a (click)="scrollToTop(a)">africaines</a></li>
+			<li><a (click)="scrollToTop(vi)">viandes</a></li>
+			<li><a (click)="scrollToTop(vo)">volailles</a></li>
+			<li><a (click)="scrollToTop(po)">poissons</a></li>
+			<li><a (click)="scrollToTop(g)">garnitures</a></li>
+			<li><a (click)="scrollToTop(pa)">pates</a></li>
+			<li><a (click)="scrollToTop(pi)">pizzas</a></li>
+			<li><a (click)="scrollToTop(d)">desserts</a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+</div>
+
+
+
+<div class="row menu-row-1">
+  <div class="container">
+    <h1 class="wow fadeIn" data-wow-delay="0.4s">Decouvrer nos délicieuses saveurs et recettes</h1>
+  </div>
+</div>
+
+<div class="row menu-row-2">
+  <div class="col l4 m4 s12 menu-row-2-bloc">
+    <img src="../../assets/images/back-img4.jpg" alt="menu image">
+  </div>
+  <div class="col l4 m4 s12 menu-row-2-bloc">
+    <img src="../../assets/images/back-img11.jpg" alt="menu image">
+  </div>
+  <div class="col l4 m4 s12 menu-row-2-two">
+    <h2 class="wow fadeIn" data-wow-duration="600ms">Des plats savoureux à vous combler d'appétit</h2>
+    <h3 class="wow fadeInUp" data-wow-duration="600ms">Entrées</h3>
+  </div>
+</div>
+
+<div class="row menu-row-3" #e>
+  <div class="container">
+    <div class="row">
+      <h2 class="content-menu-h2 wow fadeInUp" data-wow-duration="600ms">Froides</h2>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of entrees_f">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+    <div class="row">
+        <h2 class="content-menu-h2 wow fadeInUp">Chaudes</h2>
+        <div class="col l6 m6 s12 content-menu-bloc" data-wow-duration="600ms" *ngFor="let plat of entrees_c">
+          <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+            <span>{{plat.titre}}</span>
+            <span>{{plat.price}} Frcs</span>
+          </h2>
+        </div>
+    </div>
+  </div>
+  <!-- //ENTREES  -->
+
+  <!-- SANDWICHS  -->
+  <div class="parallax-container" #s>
+      <div class="parallax"><img src="../../assets/images/back-img16.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class="wow fadeIn" data-wow-duration="600ms">Sandwichs</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h2 class="content-menu-h2 wow fadeIn" data-wow-duration="600ms">Sandwichs</h2>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of sandwish">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //SANDWICHS  -->
+
+  <!-- RECETTES CHINOISES  -->
+  <div class="parallax-container" #c>
+      <div class="parallax"><img src="../../assets/images/back-img14.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class="wow fadeIn" data-wow-duration="600ms">Chinoises</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row" >
+    <div class="container">
+      <h2 class="content-menu-h2 content-menu-h2-chinoises wow fadeIn" data-wow-duration="600ms">Recettes Chinoises</h2>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of chinoises">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //RECETTES CHINOISES  -->
+
+  <!--  POTAGE  -->
+  <div class="parallax-container" #p>
+      <div class="parallax"><img src="../../assets/images/back-img18.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class="wow fadeIn" data-wow-duration="600ms">Potages</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h2 class="content-menu-h2 wow fadeIn" data-wow-duration="600ms">Recettes Potages</h2>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of potages">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //POTAGE  -->
+
+  <!--  AFRICAINES  -->
+  <div class="parallax-container" #a>
+      <div class="parallax"><img src="../../assets/images/back-img17.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class="wow fadeIn" data-wow-duration="600ms">Africaines</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h2 class="content-menu-h2 content-menu-h2-africaines wow fadeIn" data-wow-duration="600ms">Recettes Africaines</h2>
+      <div class="col l12 m12 s12 content-menu-bloc-cplt">
+        <h5 class="content-menu-h5">
+          Accompagnements Systématiques : Foutou Banane | Foutou Ignames | Riz
+        </h5>
+      </div>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of africaines">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //AFRICAINES  -->
+
+  <!--  VIANDES  -->
+  <div class="parallax-container" #vi>
+      <div class="parallax"><img src="../../assets/images/back-img19.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class=" wow fadeIn" data-wow-duration="600ms">Viandes</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h2 class="content-menu-h2 content-menu-h2-viandes wow fadeIn" data-wow-duration="600ms">Recettes à base de Viandes</h2>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of viandes">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //VIANDES  -->
+
+  <!--  VOLAILLES  -->
+  <div class="parallax-container" #vo>
+      <div class="parallax"><img src="../../assets/images/back-img20.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class="wow fadeIn" data-wow-duration="600ms">Volailles</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h2 class="content-menu-h2 content-menu-h2-volailles wow fadeIn" data-wow-duration="600ms">Recettes à base de Volailles</h2>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of volailles">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //VOLAILLES  -->
+
+  <!--  POISSONS  -->
+  <div class="parallax-container" #po>
+      <div class="parallax"><img src="../../assets/images/back-img21.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class="wow fadeIn" data-wow-duration="600ms">Poissons</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h2 class="content-menu-h2 content-menu-h2-poissons">Recettes à base de Poissons</h2>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of poissons">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //POISSONS  -->
+
+  <!--  GARNITURES  -->
+  <div class="parallax-container" #g>
+      <div class="parallax"><img src="../../assets/images/back-img22.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class=" wow fadeIn" data-wow-duration="600ms">Garnitures</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h2 class="content-menu-h2 wow fadeIn" data-wow-duration="600ms">Garnitures</h2>
+      <div class="col l12 m12 s12 content-menu-bloc-cplt">
+        <h5 class="content-menu-h5">
+          Accompagnements Systématiques : Attiéké | Riz
+        </h5>
+        <h5 class="content-menu-h5">
+          Supplément de riz ou attiéké : 1500 Frcs
+        </h5>
+      </div>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of garnitures">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //GARNITURES  -->
+
+  <!--  PATES  -->
+  <div class="parallax-container" #pa>
+      <div class="parallax"><img src="../../assets/images/back-img23.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class=" wow fadeIn" data-wow-duration="600ms">Pates</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h2 class="content-menu-h2 content-menu-h2-pates wow fadeIn" data-wow-duration="600ms">Recettes à base de Pates</h2>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of pates">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //PATES  -->
+
+  <!--  PIZZAS  -->
+  <div class="parallax-container" #pi>
+      <div class="parallax"><img src="../../assets/images/back-img24.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class="wow fadeIn" data-wow-duration="600ms">Pizzas</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <h2 class="content-menu-h2 wow fadeIn" data-wow-duration="600ms">Pizzas</h2>
+      <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of pizzas">
+        <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+          <span>{{plat.titre}} | {{plat.composition}}</span>
+          <span>{{plat.price}} Frcs</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- //PIZZAS  -->
+
+  <!--  DESSERTS  -->
+  <div class="parallax-container" #d>
+      <div class="parallax"><img src="../../assets/images/back-img25.jpg"></div>
+      <div class="container menu-row-3-container">
+        <div class="col l12 m12 s12 ">
+          <h3 class=" wow fadeIn" data-wow-duration="600ms">Desserts</h3>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <div class="row">
+        <h2 class="content-menu-h2 wow fadeIn" data-wow-duration="600ms">Glaces</h2>
+        <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of dessert_glaces">
+          <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+            <span>{{plat.titre}}</span>
+            <span>{{plat.price}} Frcs</span>
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <h2 class="content-menu-h2 wow fadeIn" data-wow-duration="600ms">Sorbets</h2>
+        <div class="col l6 m6 s12 content-menu-bloc" *ngFor="let plat of dessert_sorbets">
+          <h2 class="content-menu-bloc-h2 wow fadeInUp" data-wow-duration="600ms">
+            <span>{{plat.titre}}</span>
+            <span>{{plat.price}} Frcs</span>
+          </h2>
+        </div>
+        </div>
+    </div>
+  </div>
+  <!-- //DESSERTS  -->
+
+  <div class="row row-menu-bottom">
+    <div class="container">
+      <div class="col l5 m5 s12 row-menu-bottom-bloc ">
+        <h3 class="wow fadeInDown" data-wow-duration="600ms">Nous savons que faire de</h3>
+        <h2 class="wow fadeInLeft" data-wow-duration="600ms">La qualité</h2>
+        <p class="wow fadeInUp" data-wow-duration="600ms">
+          Découvrer par vous même
+        </p>
+      </div>
+      <div class="col l6 offset-l1 m5 offset-m1 s12 row-menu-bottom-img-bloc ">
+          <img src="../../assets/images/m1.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,55 @@
+.bordering {
+  border-bottom: solid 2px #fff;
+}
+
+.back-animate {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+#navbar-top .index-menu-right {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#nav-mobile {
+  padding-top: 20px;
+}
+
+#nav-mobile li a {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 35px !important;
+}
+
+#mobile-demo {
+  background: #45484d;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#45484d), to(#000000));
+  background: linear-gradient(to bottom, #45484d 0%, #000000 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000', GradientType=0);
+  /* IE6-9 */
+}
+
+#mobile-demo h1 {
+  color: #f32f2f;
+  text-align: center;
+  font-family: BS;
+  font-weight: bolder;
+}
+
+#mobile-demo li {
+  text-align: center;
+}
+
+#mobile-demo li>a {
+  color: #fff !important;
+  font-size: 2em;
+  font-family: BS;
+}
