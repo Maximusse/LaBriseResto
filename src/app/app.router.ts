@@ -8,6 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { BarComponent } from './components/bar/bar.component';
 import { SpecialComponent } from './components/special/special.component';
 import { GallerieComponent } from './components/gallerie/gallerie.component';
+import { EvenementsComponent } from './components/evenements/evenements.component';
 
 
 
@@ -18,7 +19,8 @@ export const router: Routes = [
     { path: 'menu', component: MenuComponent },
     { path: 'bar', component: BarComponent },
     { path: 'special', component: SpecialComponent },
-    { path: 'gallerie', component: GallerieComponent }
+    { path: 'gallerie', component: GallerieComponent },
+    { path: 'event', component: EvenementsComponent }
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);

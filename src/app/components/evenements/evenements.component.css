@@ -1,0 +1,159 @@
+/* event-row-1 */
+.event-row-1{
+    margin-top: -100px;
+    margin-bottom: 0;
+    padding-top: 299px;
+    padding-bottom: 305px;
+    background: url('../../../assets/images/g2.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media only screen  and (max-device-width : 375px) {
+    div.row.event-row-1{
+        padding-top: 273px;
+        padding-bottom: 201px;
+    }
+
+    .event-row-1 h1{
+        font-size: 5em !important;
+    }
+}
+
+.event-row-1 h1{
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 9em;
+    font-weight: bolder;
+    font-family: bs;
+    text-align: center;
+}
+/* // event-row-1 */
+
+/* event-row 2 */
+.event-row-2{
+    margin: 0;
+}
+
+.event-row-2 h4{
+    margin-top: 50px;
+    font-size:  2em;
+    font-weight: 700;
+    text-align: center;
+}
+
+/*// event-row 2 */
+
+/* event-row-3 */
+.event-row-3{
+    margin: 0;
+}
+
+.event-row-3 .events-titles-inner, .events {
+    border: solid 1px #efefef;
+}
+
+.event-row-3 .events-titles-inner h2{
+    color: #f32f2f;
+    font-size: 3em;
+    font-weight: 600;
+    font-family: BS;
+    text-align: center;
+}
+
+.event-row-3 .events-titles-inner h5{
+    color: #777;
+    text-align: center;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+.eti-el-bloc h3{
+    margin: 0;
+    padding-left: 40px;
+}
+
+.eti-el-bloc h3 > a{
+    color: #777;
+    font-size: 14px;
+}
+
+.events{
+    padding: 0;
+}
+
+.events .events-bloc{
+    padding: 0;
+}
+
+.events .events-bloc h5,.events .events-bloc h6{
+    color: #777;
+}
+
+
+.events .events-bloc h5{
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    height: 40px;
+}
+
+.events .events-bloc h6{
+    font-size: 11px;
+    text-align: center;
+}
+
+.events .events-bloc img{
+    width: 100%;
+}
+/* detais */
+.event-details h5{
+    font-size: 13px;
+    text-align: right;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.event-details h5 a{
+    margin-left: 10px;
+    padding-top: 5px;
+    border: solid 1px #f32f2f;
+    color: #777;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.event-details h5 img{
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+}
+
+.event-details h4{
+    font-size: 22px;
+    color: #000;
+}
+
+.event-details h6{
+    color: #777;
+}
+
+.event-details p{
+    font-size: 12px;
+    color: #777;
+
+}
+
+.event-details-img-bloc{
+    padding: 0;
+}
+
+.event-details-img-bloc img{
+    width: 100%;
+}
+
+
+/* //event-row-3 */

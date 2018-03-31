@@ -18,6 +18,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { BarComponent } from './components/bar/bar.component';
 import { SpecialComponent } from './components/special/special.component';
 import { GallerieComponent } from './components/gallerie/gallerie.component';
+import { EvenementsComponent } from './components/evenements/evenements.component';
 
 
 
@@ -31,7 +32,8 @@ import { GallerieComponent } from './components/gallerie/gallerie.component';
     MenuComponent,
     BarComponent,
     SpecialComponent,
-    GallerieComponent
+    GallerieComponent,
+    EvenementsComponent
   ],
   imports: [
     BrowserModule,
