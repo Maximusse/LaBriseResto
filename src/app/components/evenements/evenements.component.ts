@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, state, animate, style, transition } from '@angular/animations';
+import { Component, OnInit, keyframes } from '@angular/core';
+import { trigger, state, animate, style, transition, query } from '@angular/animations';
 import { fallIn, moveIn } from '../../app.animations';
 import { NgProgress } from 'ngx-progressbar';
 import { WOW } from 'wowjs/dist/wow.min';
+
+import { EventsService } from '../../services/events.service';
 
 declare var $: any;
 
@@ -15,7 +17,11 @@ declare var $: any;
 })
 export class EvenementsComponent implements OnInit {
 
-  constructor(public progressService: NgProgress) { }
+  toggleView: boolean = false;
+  evenements: any;
+  eventDetails: any = [];
+
+  constructor(public progressService: NgProgress, private eventService: EventsService) { }
 
   ngOnInit() {
     new WOW().init();
@@ -32,7 +38,18 @@ export class EvenementsComponent implements OnInit {
       $(window).scrollTop(0);
     })
 
+    this.evenements = this.eventService.getEvent();
 
+  }
+
+  showEventDetail(event){
+    this.eventDetails = this.evenements[event];
+    this.toggleView = true;
+  }
+
+  closePanel(){
+    this.toggleView = false;
+    this.eventDetails = [];
   }
 
 }

@@ -20,61 +20,37 @@
         <h2>La Brise</h2>
         <h5>Evènements</h5>
         <div class="eti-el">
-          <div class="eti-el-bloc">
-            <h3>
-              <a href="">
-                <img src="../../assets/images/pins.png" alt="pins"> Diner gala rotaric club Yamoussoukro
-              </a>
-            </h3>
-            <h3>
-              <a href="">
-                <img src="../../assets/images/pins.png" alt="pins"> Réception après réunion
-              </a>
-            </h3>
-            <h3>
-              <a href="">
-                <img src="../../assets/images/pins.png" alt="pins"> Soirée détente
-              </a>
-            </h3>
+          <div class="eti-el-bloc wow fadeIn" data-wow-iteration="200ms" *ngFor="let events of evenements;let i = index">
+              <h3 (click)="showEventDetail(i)">
+                  <a>
+                    <img src="../../assets/images/pins.png" alt="pins">{{events.titre}}
+                  </a>
+                </h3>
           </div>
         </div>
       </div>
     </div>
     <div class="col l7 m7 s12 events">
-      <div class="all-events">
-        <div class="col l4 m4 s12 events-bloc">
-          <a href="">
-            <h5>Diner Gala</h5>
-            <h6>10/05/2017</h6>
-            <img src="../../assets/images/back-img32.jpg" alt="Image evenement">
-          </a>
-        </div>
-        <div class="col l4 m4 s12 events-bloc">
-          <a href="">
-            <h5>Reception Rotary Club</h5>
-            <h6>10/05/2017</h6>
-            <img src="../../assets/images/back-img32.jpg" alt="Image evenement">
-          </a>
-        </div>
-        <div class="col l4 m4 s12 events-bloc">
-          <a href="">
-            <h5>Soirée détente</h5>
-            <h6>10/05/2017</h6>
-            <img src="../../assets/images/back-img32.jpg" alt="Image evenement">
-          </a>
-        </div>
+      <div class="all-events" *ngIf="!toggleView" [@moveIn]>
+          <div class="col l4 m4 s12 events-bloc" *ngFor="let events of evenements; let i = index" (click)="showEventDetail(i)">
+              <a>
+                <h5>{{events.titre}}</h5>
+                <h6>{{events.date}}</h6>
+                <img src="../../assets/images/back-img32.jpg" alt="Image evenement">
+              </a>
+            </div>
         <div class="clear"></div>
       </div>
-      <div class="event-details">
-        <h5>
-          <a href="">
+      <div class="event-details wow fadeIn" *ngIf="toggleView">
+        <h5 (click)="closePanel()" class="close-panel-btn">
+          <a>
               <img src="../../assets/images/pins-left.png" alt="pins">
           </a>
         </h5>
-        <h4>Diner gala rotariic club Yamoussoukro</h4>
-        <h6>10/08/2017</h6>
+        <h4>{{eventDetails.titre}}</h4>
+        <h6>{{eventDetails.date}}</h6>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo numquam vel beatae saepe voluptate eius error? Qui, enim distinctio vero, hic deleniti porro nisi omnis modi neque at similique vitae?
+          {{eventDetails.content}}
         </p>
         <div class="col l4 m4 s12 event-details-img-bloc">
             <img src="../assets/images/g1.jpg" alt="Details image">

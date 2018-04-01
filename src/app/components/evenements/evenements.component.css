@@ -75,10 +75,22 @@
     padding-left: 40px;
 }
 
+.eti-el-bloc h3:hover{
+    cursor: pointer;
+}
+
 .eti-el-bloc h3 > a{
     color: #777;
     font-size: 14px;
 }
+
+.close-panel-btn > a:hover{
+    cursor: pointer;
+    background: #efefef;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+}
+
 
 .events{
     padding: 0;
@@ -86,6 +98,10 @@
 
 .events .events-bloc{
     padding: 0;
+}
+
+.events .events-bloc:hover{
+    cursor: pointer;
 }
 
 .events .events-bloc h5,.events .events-bloc h6{

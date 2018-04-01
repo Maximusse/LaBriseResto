@@ -20,6 +20,8 @@ import { SpecialComponent } from './components/special/special.component';
 import { GallerieComponent } from './components/gallerie/gallerie.component';
 import { EvenementsComponent } from './components/evenements/evenements.component';
 
+import { EventsService } from './services/events.service';
+
 
 
 @NgModule({
@@ -43,7 +45,7 @@ import { EvenementsComponent } from './components/evenements/evenements.componen
     ScrollToModule.forRoot()
   ],
   providers: [
-    {provide: BrowserXhr, useClass: NgProgressBrowserXhr}
+    {provide: BrowserXhr, useClass: NgProgressBrowserXhr}, EventsService
   ],
   bootstrap: [AppComponent]
 })
