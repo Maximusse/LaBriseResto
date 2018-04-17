@@ -3,7 +3,9 @@
 
 <div class="row event-row-1">
   <div class="container">
-    <h1 class="wow fadeInDown">Evènementiel</h1>
+    <h1 class="wow fadeInLeft">Evenement
+      <span>La Brise restaurant</span>
+    </h1>
   </div>
 </div>
 
@@ -13,64 +15,126 @@
   </div>
 </div>
 
-<div class="row event-row-3">
+<div class="row event-row-3" *ngIf="!toggleView" [@fallIn]>
   <div class="container">
-    <div class="col l5 m5 s12 events-titles">
-      <div class="events-titles-inner">
-        <h2>La Brise</h2>
-        <h5>Evènements</h5>
-        <div class="eti-el">
-          <div class="eti-el-bloc wow fadeIn" data-wow-iteration="200ms" *ngFor="let events of evenements;let i = index">
-              <h3 (click)="showEventDetail(i)">
-                  <a>
-                    <img src="../../assets/images/pins.png" alt="pins">{{events.titre}}
-                  </a>
-                </h3>
-          </div>
+    <div class="event-left col l6 m12 s12">
+      <div class="event-left-content">
+        <img src="../../assets/images/event1.jpg" alt="event image">
+        <div class="elc-hover">
+          <a (click)="showEventDetail()">
+            <h4>01 Mars 2018:
+              <span>reception de mariage</span>
+            </h4>
+            <p>
+              Cette journée fut marquée par le mariage entre Monsieur X et Madame X Créant un ambiance de joie de restauration.
+            </p>
+          </a>
         </div>
       </div>
     </div>
-    <div class="col l7 m7 s12 events">
-      <div class="all-events" *ngIf="!toggleView" [@moveIn]>
-          <div class="col l4 m4 s12 events-bloc" *ngFor="let events of evenements; let i = index" (click)="showEventDetail(i)">
-              <a>
-                <h5>{{events.titre}}</h5>
-                <h6>{{events.date}}</h6>
-                <img src="../../assets/images/back-img32.jpg" alt="Image evenement">
-              </a>
-            </div>
-        <div class="clear"></div>
-      </div>
-      <div class="event-details wow fadeIn" *ngIf="toggleView">
-        <h5 (click)="closePanel()" class="close-panel-btn">
-          <a>
-              <img src="../../assets/images/pins-left.png" alt="pins">
+    <div class="event-right col l6 m12 s12">
+      <div class="event-right-bloc col l12 m12 s12">
+        <div class="erb-content-left">
+          <img src="../../assets/images/event1.jpg" alt="event image">
+          <!--<a (click)="showEventDetail()">
+            <img src="../../assets/images/pins-plus.png" alt="pins">
+          </a>-->
+        </div>
+        <div class="erb-content-right">
+          <a (click)="showEventDetail()">
+            <h4>24 MARS 2018 : Rencontre de la municipalité de yamoussoukro</h4>
           </a>
-        </h5>
-        <h4>{{eventDetails.titre}}</h4>
-        <h6>{{eventDetails.date}}</h6>
-        <p>
-          {{eventDetails.content}}
-        </p>
-        <div class="col l4 m4 s12 event-details-img-bloc">
-            <img src="../assets/images/g1.jpg" alt="Details image">
-        </div>
-        <div class="col l4 m4 s12 event-details-img-bloc">
-            <img src="../assets/images/g1.jpg" alt="Details image">
-        </div>
-        <div class="col l4 m4 s12 event-details-img-bloc">
-            <img src="../assets/images/g1.jpg" alt="Details image">
-        </div>
-        <div class="col l4 m4 s12 event-details-img-bloc">
-            <img src="../assets/images/g1.jpg" alt="Details image">
-        </div>
-        <div class="col l4 m4 s12 event-details-img-bloc">
-            <img src="../assets/images/g1.jpg" alt="Details image">
-        </div>
-        <div class="col l4 m4 s12 event-details-img-bloc">
-            <img src="../assets/images/g1.jpg" alt="Details image">
+          <p>
+            La rencontre du syndicat des travailleurs de la mairie a été couronnée par une cérémonie de remise de diplome.
+          </p>
         </div>
       </div>
+      <div class="event-right-bloc col l12 m12 s12">
+        <div class="erb-content-left">
+          <img src="../../assets/images/event1.jpg" alt="event image">
+          <!--<a (click)="showEventDetail()">
+            <img src="../../assets/images/pins-plus.png" alt="pins">
+          </a>-->
+        </div>
+        <div class="erb-content-right">
+          <a (click)="showEventDetail()">
+            <h4>24 MARS 2018 : Rencontre de la municipalité de yamoussoukro</h4>
+          </a>
+          <p>
+            La rencontre du syndicat des travailleurs de la mairie a été couronnée par une cérémonie de remise de diplome.
+          </p>
+        </div>
+      </div>
+      <div class="event-right-bloc col l12 m12 s12">
+        <div class="erb-content-left">
+          <img src="../../assets/images/event1.jpg" alt="event image">
+          <!--<a (click)="showEventDetail()">
+            <img src="../../assets/images/pins-plus.png" alt="pins">
+          </a>-->
+        </div>
+        <div class="erb-content-right">
+          <a (click)="showEventDetail()">
+            <h4>24 MARS 2018 : Rencontre de la municipalité de yamoussoukro</h4>
+          </a>
+          <p>
+            La rencontre du syndicat des travailleurs de la mairie a été couronnée par une cérémonie de remise de diplome.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row event-row-4" *ngIf="toggleView" [@moveIn]>
+  <div class="container">
+    <a class="back-btn" (click)="closePanel()">Retour</a>
+    <p class="event-date">| 24 Mars 2018</p>
+    <div class="col l12 m12 s12 event-row-4-content-one">
+      <img src="../../assets/images/event.jpg" alt="event image">
+      <div class="er4co-hover">
+        <h2>Reception de mariage</h2>
+        <p>
+          Tous nos voeux de joie et de bonheur au couple X. Surtout Nous leur remerçions d'avoir choisir le restaurant le plus classe
+          de la ville, le restaurant La Brise.
+        </p>
+      </div>
+    </div>
+    <div class="col l12 m12 s12 event-row-4-content-two">
+      <div class="col l3 m3 s12 event-row-4-content-two-img-bloc">
+          <img class="materialboxed" src="../../assets/images/event.jpg" alt="event image">
+      </div>
+      <div class="col l3 m3 s12 event-row-4-content-two-img-bloc">
+          <img class="materialboxed" src="../../assets/images/event.jpg" alt="event image">
+      </div>
+      <div class="col l3 m3 s12 event-row-4-content-two-img-bloc">
+          <img class="materialboxed" src="../../assets/images/event.jpg" alt="event image">
+      </div>
+      <div class="col l3 m3 s12 event-row-4-content-two-img-bloc">
+          <img class="materialboxed" src="../../assets/images/event.jpg" alt="event image">
+      </div>
+      <div class="col l3 m3 s12 event-row-4-content-two-img-bloc">
+          <img class="materialboxed" src="../../assets/images/event.jpg" alt="event image">
+      </div>
+      <div class="col l3 m3 s12 event-row-4-content-two-img-bloc">
+          <img class="materialboxed" src="../../assets/images/event.jpg" alt="event image">
+      </div>
+      <div class="col l3 m3 s12 event-row-4-content-two-img-bloc">
+          <img class="materialboxed" src="../../assets/images/event.jpg" alt="event image">
+      </div>
+      <div class="col l3 m3 s12 event-row-4-content-two-img-bloc">
+          <img class="materialboxed" src="../../assets/images/event.jpg" alt="event image">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row event-row-5">
+  <div class="container">
+    <div class="col l2 m2 s2 event-row-5-one">
+        <img src="../../assets/images/pins-serveur.png" alt="event image">
+    </div>
+    <div class="col l8 m10 s10 event-row-5-two">
+      <h2>Services de qualite <span>pour votre satisfaction</span></h2>
     </div>
   </div>
 </div>

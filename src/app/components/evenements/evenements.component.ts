@@ -36,20 +36,33 @@ export class EvenementsComponent implements OnInit {
 
     $(function(){
       $(window).scrollTop(0);
+      $('.materialboxed').materialbox();
+      
+      var a = $('.event-right-bloc .erb-content-left a');
+      var c = $('.erb-content-left');
+
+      c.hover(function(){
+        $(this).find('a').animate({'top':'0'},400);
+      });
+
+      c.mouseleave(function(){
+        $(this).find('a').animate({'top':'-202px'},400);
+      })
+
     })
 
     this.evenements = this.eventService.getEvent();
 
   }
 
-  showEventDetail(event){
-    this.eventDetails = this.evenements[event];
+  showEventDetail(){
+    // this.eventDetails = this.evenements[event];
     this.toggleView = true;
   }
 
   closePanel(){
     this.toggleView = false;
-    this.eventDetails = [];
+    // this.eventDetails = [];
   }
 
 }
